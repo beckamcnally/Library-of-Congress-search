@@ -1,19 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
 
-    </head>
-    <body>
-        <div>
-            <h1>Library of Congress</h1>
-            <form id="form">
-                <label for="city">City:</label>
-                <input type="text" id="city">
-                <select id="options" name="options">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library of Congress Search</title>
+
+</head>
+
+<body class="font-serif text-red-200 bg-red-200">
+    <div class="flex justify-center items-center h-screen">
+        <div class="border-4 border-indigo-800 rounded-sm border-solid container columns-7xl bg-indigo-900">
+            <h1 class="text-center text-2xl">Library of Congress</h1>
+            <form id="form" class="font-serif grid grid-cols-1 gap-4 ">
+                <div class="col-span-1">
+                    <label for="city" class="block mb-2">City:</label>
+                    <input class="text-blue-700 border rounded w-full py-2 px-3" type="text" id="city">
+                </div>
+
+                <select class="text-blue-700 col-span-1 h-12" id="options" name="options">
                     <option value="maps">Maps</option>
                     <option value="audio">Audio</option>
                     <option value="photos">Photos</option>
@@ -22,10 +28,16 @@
                     <option value="film-and-video">Film and Video</option>
                     <option value="notated-music">Notated Music</option>
                     <option value="websites">Websites</option>
-                  </select>
-                <button id="submit">Submit</button>
+                </select>
+                    <button id="submit"
+                        class="col-span-1 bg-blue-500 hover:bg-blue-700 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Submit</button>
+                
             </form>
         </div>
-    <script src="./assets/script.js" ></script>
-    </body>
+
+    </div>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./assets/script.js"></script>
+</body>
+
 </html>

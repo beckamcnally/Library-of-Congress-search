@@ -1,115 +1,62 @@
 
 # Library of Congress Search
 
-In this activity, you will work with a group to build an application that searches and displays results from the Library of Congress API.
+# Your Project Title 
 
-## Psuedo Code
+## Technology Used 
 
-### First Page
-Form - textbox - submit button
-input form would have an id that we would have an id that we link back to
-and also need to have a drop down selct with all the options
+| Technology Used         | Resource URL           | 
+| ------------- |:-------------:| 
+| HTML    | [https://developer.mozilla.org/en-US/docs/Web/HTML](https://developer.mozilla.org/en-US/docs/Web/HTML) | 
+| CSS     | [https://developer.mozilla.org/en-US/docs/Web/CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)      |   
+| Git | [https://git-scm.com/](https://git-scm.com/)     |    
+| Library of Congress API documentation | [https://libraryofcongress.github.io/data-exploration/](https://libraryofcongress.github.io/data-exploration/)     |    
 
+## Description 
 
-create div
-  create an input form 
-
-maps 
-audio
-photos
-manuscripts
-newspapers
-film-and-video
-notated-music
-websites
-
-event for submitbtn
-  getid from input of selected
-    equals variable in js
-
-  fetch api from library congress
-    - include variable from called id
-save variable of city serched to local storage
-### Second Page
-create new elements that we have gotten from the second html 
-
-go back button
-
-get previously saved city 
-
-and also save new serch result to storage 
- 
+[Visit the Deployed Site](#)
 
 
-## Instructions
 
-The completed application should meet the following criteria:
+![Site Langing Page](#)
 
-* As a user, I can submit a search query from the application to request data and receive a response from the Library of Congress.
 
-* As a user, I can either perform a generic search for data in all formats or I can select a format in the form to help filter results.
+## Table of Contents 
 
-* As a user, I can see all of the results of my search displayed on a separate page.
+* [Usage](#usage)
+* [Learning Points](#learning-points)
+* [Author Info](#author-info)
+* [Credits](#credits)
+* [License](#license)
 
-* As a user, I can conduct additional searches from the results page as well.
 
-To learn about how to use this API, check out the Requests section of the [Library of Congress API documentation](https://libraryofcongress.github.io/data-exploration/).
+## Usage 
 
-### The Homepage
+Provide instructions and examples for use. Include screenshots as needed. 
 
-The homepage (`index.html`) should have the following:
+To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative filepath, add it to your README using the following syntax:
 
-* A simple, well thought-out UI.
+```md
+![alt text](assets/images/screenshot.png)
+```
 
-* A form with a text input field to capture a search query and an option select dropdown to capture the format of the search query. The options in the dropdown should be a list of the possible format values listed in the [Library of Congress API documentation on requests](https://libraryofcongress.github.io/data-exploration/requests.html#format).
 
-* A browser event listener attached to the form to execute a function on submission, which will capture both form values and redirect the user to a search results page with those values included in the URL as query parameters. This will use the browser's `location.replace()` method.
+## Learning Points 
 
-* If there is no format selected from the dropdown, the URL should look something like the following example:
 
-  ```http
-  /search-results.html?q=dogs&format=
-  ```
 
-* If there is a format selected from the dropdown, the URL should look something like the following example:
 
-  ```http
-  /search-results.html?q=dogs&format=photos
-  ```
+## Author Info
 
-### The Search Results Page
 
-The search results page (`search-results.html`) should have and do the following:
+### Becka McNally 
 
-* On page load, if there are query parameters, immediately parse them and use them in a request URL to fetch data from the Library of Congress API.
 
-* If there is a value for the format query parameter, use the format endpoint to search for something based on the chosen format. For more information, see the [Library of Congress API documentation on the format endpoint](https://libraryofcongress.github.io/data-exploration/requests.html#format).
+* [Portfolio](https://beckamcnally.github.io/beckamcnally/)
+* [LinkedIn](https://www.linkedin.com/in/becka-mcnally/)
+* [Github](https://github.com/beckamcnally)
 
-* If there is no value for the format query parameter, use the search endpoint to search for all types of data. For more information, see the [Library of Congress API documentation on the search endpoint](https://libraryofcongress.github.io/data-exploration/requests.html#search).
 
-* The response from the API request will then be displayed on the page. It is up to you and your team to determine which data should be displayed from the overall `response` object, but you must use data from the `results` property in the `response` object. For more information, see the [Library of Congress API documentation on responses](https://libraryofcongress.github.io/data-exploration/responses.html).
 
-* The same form from the homepage should be here as well. Instead of redirecting a user to another page, however, it will perform a search right on the page and display the new results.
 
-## Assets
 
-The following image demonstrates the homepage's appearance and functionality:
-
-![The home page shows a search bar with the ability to select a format from a dropdown menu.](./Images/01-homepage.png)
-
-The following image demonstrates the search results page's appearance and functionality:
-
-![The search results page displays results from a search conducted in the form on the left side of the page.](./Images/02-search-results-page.png)
-
----
-
-## 💡 Hints
-
-Will every result have the same data? If not, how will we handle printing it to the page? Can the form design and functionality from the homepage be reused for the search results page?
-
-## 🏆 Bonus
-
-* How can we build this application using our knowledge in Git collaboration?
-
----
-© 2022 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
